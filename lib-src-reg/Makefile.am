@@ -6,8 +6,6 @@ SPXinterface.cc \
 LPinterface.cc \
 RegularityCheck.cc
 
-LDADD           = ../lib-src/libTOPCOM.la
-
 include_HEADERS = \
 QSOinterface.hh \
 SPXinterface.hh \

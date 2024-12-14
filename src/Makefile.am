@@ -121,8 +121,7 @@ santos_triang_SOURCES              = santos_triang.cc
 santos_dim4_triang_SOURCES         = santos_dim4_triang.cc
 santos_22_triang_SOURCES           = santos_22_triang.cc
 
-LDADD           = ../lib-src-reg/libCHECKREG.la \
-		  ../lib-src/libTOPCOM.la
+LDADD           = ../lib-src/libTOPCOM.la
 
 if USE_QSOPTEX
 LDADD          += ../external/lib/libqsopt_ex.a

@@ -10,8 +10,9 @@ AC_SUBST([TOPCOMROOT], [`pwd`])
 
 dnl set some compilation switches consistently:
 AC_SUBST([AM_CPPFLAGS], ["-DSTL_SYMMETRIES -DSTL_CONTAINERS -DSTL_FLIPS -DSTL_CHIROTOPE -DGMPRATIONAL -DPERMLIB_DOMAIN_INT -DUSE_LEXORDER]")
-AC_SUBST([AM_CXXFLAGS], [" -fvisibility=hidden -fvisibility-inlines-hidden -pthread -std=c++17"])
-AC_SUBST([AM_LDFLAGS], ["-L../external/lib]")
+dnl AC_SUBST([AM_CXXFLAGS], [" -fvisibility=hidden -fvisibility-inlines-hidden -pthread -std=c++17"])
+AC_SUBST([AM_CXXFLAGS], ["-pthread -std=c++17"])
+dnl AC_SUBST([AM_LDFLAGS], ["-L../external/lib]")
 
 dnl backup the user variable LDFLAGS:
 dnl AC_SUBST([LDFLAGS_backup], [${LDFLAGS}])
@@ -20,10 +21,10 @@ dnl add local libraries to LDFLAGS so that AC_CHECK_LIB will find them:
 dnl AC_SUBST([LDFLAGS], ["-L${TOPCOMROOT}/external/lib"])
 
 dnl Checks for programs.
+LT_INIT
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_CXX
-AC_PROG_RANLIB
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST

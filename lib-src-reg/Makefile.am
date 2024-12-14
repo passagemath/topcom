@@ -1,10 +1,12 @@
-lib_LIBRARIES = libCHECKREG.a
+lib_LTLIBRARIES = libCHECKREG.la
 
-libCHECKREG_a_SOURCES = \
+libCHECKREG_la_SOURCES = \
 QSOinterface.cc \
 SPXinterface.cc \
 LPinterface.cc \
 RegularityCheck.cc
+
+LDADD           = ../lib-src/libTOPCOM.la
 
 include_HEADERS = \
 QSOinterface.hh \

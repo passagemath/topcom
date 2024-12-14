@@ -1,6 +1,6 @@
-lib_LIBRARIES       = libTOPCOM.a
+lib_LTLIBRARIES       = libTOPCOM.la
 
-libTOPCOM_a_SOURCES = \
+libTOPCOM_la_SOURCES = \
 Admissibles.cc \
 CheckTriang.cc \
 Circuits.cc \

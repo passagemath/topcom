@@ -2,8 +2,8 @@ bin_PROGRAMS = checkregularity
 
 checkregularity_SOURCES = checkregularity.cc
 
-LDADD           = ../lib-src/libTOPCOM.a \
-                  ../lib-src-reg/libCHECKREG.a \
+LDADD           = ../lib-src-reg/libCHECKREG.la \
+                  ../lib-src/libTOPCOM.la \
                   -lgmpxx -lgmp
 
 

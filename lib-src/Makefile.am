@@ -132,7 +132,7 @@ Vertices.hh \
 VirtualChiro.hh \
 Volumes.hh
 
-LDADD           = ../lib-src-reg/libCHECKREG.la
+AM_LDFLAGS = -L../lib-src-reg -lCHECKREG
 
 AM_CPPFLAGS    += -I../lib-src-reg
 AM_CPPFLAGS    += -I../wrap-gmp-gmpxx

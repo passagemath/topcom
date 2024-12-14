@@ -43,8 +43,10 @@ else
   AC_MSG_NOTICE([... done])
 fi
 
-dnl Make libcddgmp:
-make -C external cdd
+
+AC_CHECK_HEADERS([cddlib/setoper.h],[
+    AC_SEARCH_LIBS([dd_free_global_constants],[cddgmp], [], [AC_MSG_ERROR([Can't use cddgmp library])])
+    ], [AC_MSG_ERROR([Can't find cdd library headers])])
 
 dnl Check for requests for third-party packages:
 dnl Check for qsopt_ex:

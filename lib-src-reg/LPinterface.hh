@@ -21,8 +21,8 @@
 #include "LabelSet.hh"
 #include "Rational.h"
 
-#include "setoper.h"
-#include "cdd.h"
+#include <cddlib/setoper.h>
+#include <cddlib/cdd.h>
 
 namespace topcom {
 

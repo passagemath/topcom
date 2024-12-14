@@ -39,7 +39,7 @@ on:
   push:
     tags:
     branches:
-      - master
+      - main
   workflow_dispatch:
     # Allow to run manually
 
